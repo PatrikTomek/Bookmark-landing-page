@@ -39,4 +39,30 @@
     });
   }
   faqAccordion();
+
+  function emailValidator() {
+    function emailValid() {
+      console.log("validate");
+    }
+    function emailNotValid() {
+      console.log("not validate");
+      $(".email-error_input-icon").css("display", "flex");
+      $(".email-error_sign").css("display", "flex");
+      $("#email_input").css("border", "2px solid var(--Soft-Red)");
+    }
+
+    const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailInput = $("#email_input");
+
+    if (emailValidation.test(emailInput.value)) {
+      emailValid();
+      return true;
+    } else {
+      emailNotValid();
+      console.log(emailInput.value);
+      return false;
+    }
+  }
+
+  $("#email_input").change(emailValidator);
 })(jQuery);
