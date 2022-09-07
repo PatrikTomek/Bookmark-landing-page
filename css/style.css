@@ -26,7 +26,6 @@ button {
 
 body {
   font-family: "Rubik", sans-serif;
-  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -37,7 +36,7 @@ body {
   font-weight: 500;
 }
 .logo img {
-  margin-top: 22px;
+  margin-top: 20px;
   margin-left: 48px;
 }
 .nav-bar a {
@@ -52,6 +51,7 @@ body {
   display: flex;
   align-content: flex-end;
   justify-content: flex-end;
+  margin-top: 13px;
   margin-right: 50px;
 }
 .main-nav_btn a {
@@ -81,13 +81,12 @@ body {
 
 .container {
   width: 1440px;
-  border: 1px solid purple;
+  overflow: hidden;
   margin: auto;
 }
 .content_container {
   width: 1300px;
   margin: auto;
-  border: 1px solid lightsalmon;
 }
 
 .logo_img {
@@ -101,8 +100,8 @@ body {
 .main-text_container {
   float: left;
   width: 515px;
-  margin-top: 130px;
-  margin-left: -100px;
+  margin-top: 155px;
+  margin-left: 90px;
 }
 .main-text_container h1 {
   font-size: 45px;
@@ -110,9 +109,10 @@ body {
   letter-spacing: 0.7px;
 }
 .main-text_container p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 27px;
   margin-top: -5px;
+  margin-bottom: 15px;
 }
 .main-text_container button {
   padding: 13px 18px 12px;
@@ -147,24 +147,32 @@ body {
   height: 465px;
   width: 660px;
   top: 165px;
-  left: 970px;
+  left: 960px;
 }
 .decor {
   position: absolute;
-  width: 510px;
+  width: 620px;
   height: 330px;
   background-color: var(--Soft-Blue);
   border-top-left-radius: 150px;
   border-bottom-left-radius: 150px;
   z-index: -10;
-  left: 1170px;
-  top: 340px;
+  left: 250px;
+  top: 240px;
+}
+.decor_slider {
+  left: 0px;
+  top: 60px;
+  rotate: 180deg;
+}
+.dcr {
+  position: relative;
 }
 
 #features {
-  background-color: lightgreen;
   height: 800px;
   text-align: center;
+  margin-top: -12px;
 }
 #features h2,
 #extension-download h2,
@@ -175,19 +183,31 @@ body {
 }
 #features h2 {
   margin-top: 135px;
+  margin-bottom: 25px;
+}
+.paragraph-slider {
+  margin-top: -30px;
 }
 #features button {
   margin-top: 30px;
 }
 #features p,
-.extension-download_par,
-#faq_section p {
+.extension-download_par {
   width: 550px;
   margin: auto;
-  font-size: 18px;
+  font-size: 19px;
   opacity: 0.5;
   line-height: 26px;
   letter-spacing: 0.2px;
+}
+.faq-par {
+  width: 550px;
+  margin: auto;
+  font-size: 19px;
+  opacity: 0.5;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  margin-top: 26px;
 }
 .nav-bar__paragraph-slider {
   display: flex;
@@ -216,8 +236,9 @@ body {
   padding-bottom: 27.5px;
   font-weight: 400;
 }
-.slider-page_container {
+#slider-page_container p {
   margin-left: 0px;
+  width: 470px;
 }
 .slider_page {
   display: none;
@@ -253,11 +274,13 @@ body {
 }
 
 #extension-download {
-  height: 800px;
-  background-color: lightcyan;
+  height: 700px;
   text-align: center;
 }
-#extension-download p {
+#extension-download h2 {
+  margin-top: 130px;
+}
+.extension-download_par {
   margin-top: 25px;
   margin-bottom: 8px;
 }
@@ -281,11 +304,11 @@ body {
   margin-top: 31px;
 }
 .browser-par {
-  font-size: 16px;
-  margin-top: 5px;
+  font-size: 15px;
+  margin-top: 9px;
 }
 .browser-dots_img {
-  margin-top: 20px;
+  margin-top: 43px;
   margin-bottom: 20px;
 }
 .extensions-list button {
@@ -296,7 +319,8 @@ body {
   font-weight: 500;
   font-size: 15px;
 }
-.extensions-list button:hover {
+.extensions-list button:hover,
+.more-info_btn:hover {
   background-color: white;
   color: var(--Soft-Blue);
 }
@@ -312,11 +336,8 @@ body {
 
 #faq_section {
   text-align: center;
-  height: 900px;
-  background-color: lightpink;
-}
-#faq_section p {
-  margin-top: 30px;
+  height: 910px;
+  margin-top: -45px;
 }
 .faq-accordion {
   width: 550px;
@@ -347,13 +368,17 @@ body {
 }
 .faq-answer {
   display: none;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 35px;
 }
 .more-info_btn {
-  padding: 15px 22px;
+  padding: 13px 22px;
   font-size: 15px;
   color: white;
   background-color: var(--Soft-Blue);
-  border: none;
+  border: 2px solid var(--Soft-Blue);
   margin-top: 50px;
 }
 
@@ -399,7 +424,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.7px;
-  max-height: 42px;
+  max-height: 45px;
 }
 .email-error_input-icon {
   position: absolute;

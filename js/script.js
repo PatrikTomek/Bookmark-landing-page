@@ -42,10 +42,11 @@
 
   function emailValidator() {
     function emailValid() {
-      console.log("validate");
+      $(".email-error_input-icon").css("display", "none");
+      $(".email-error_sign").css("display", "none");
+      $("#email_input").css("border", "none");
     }
     function emailNotValid() {
-      console.log("not validate");
       $(".email-error_input-icon").css("display", "flex");
       $(".email-error_sign").css("display", "flex");
       $("#email_input").css("border", "2px solid var(--Soft-Red)");
@@ -59,7 +60,6 @@
       return true;
     } else {
       emailNotValid();
-      console.log(emailInput.value);
       return false;
     }
   }
