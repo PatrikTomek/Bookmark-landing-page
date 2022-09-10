@@ -131,8 +131,8 @@ body {
   border: 2px solid var(--Soft-Blue);
 }
 .get-firefox_btn {
-  background-color: rgb(232, 231, 231);
-  border: 2px solid rgb(232, 231, 231);
+  background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(242, 242, 242);
 }
 .get-chrome_btn:hover {
   border: 2px solid var(--Soft-Blue);
@@ -147,7 +147,7 @@ body {
   height: 465px;
   width: 660px;
   top: 165px;
-  left: 960px;
+  left: 50%;
 }
 .decor {
   position: absolute;
@@ -292,9 +292,9 @@ body {
   height: 360px;
   width: 285px;
   margin: 18px;
-  background-color: whitesmoke;
   text-align: center;
   border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px hsla(231, 69%, 60%, 0.182);
 }
 .browser-logo_img {
   height: 100px;
@@ -360,11 +360,15 @@ body {
 }
 .reversed-arrow {
   transform: rotate(180deg);
+  background-image: url("../images/icon-arrow-active.svg");
 }
 .faq-question {
   cursor: pointer;
   font-size: 19px;
   font-weight: 400;
+}
+.faq-question:hover {
+  color: var(--Soft-Red);
 }
 .faq-answer {
   display: none;
@@ -519,4 +523,246 @@ footer .logo_img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.respon {
+  display: none;
+}
+#mobile-menu_overlay {
+  display: none;
+}
+
+@media screen and (max-width: 1380px) {
+  .container {
+    width: 375px;
+  }
+  .content_container {
+    width: 330px;
+  }
+  .logo img {
+    margin: 0px;
+  }
+  .mobile-menu_btn {
+    background-image: url('../images/icon-hamburger.svg');
+    height: 15px;
+    width: 18px;
+    float: right;
+    margin-top: -45px;
+    margin-right: 875px;
+  }
+  .mobile-menu_btn:hover {
+    cursor: pointer;
+  }
+  #mobile-menu_overlay {
+    position: absolute;
+    display: block;
+    background-color: #242a45da;
+  }
+  #mobile-menu_overlay a {
+    color: white;
+
+  }
+  .nav-bar {
+    height: 120px;
+  }
+  #main {
+    display: block;
+    height: 300px;
+    width: auto;
+    margin: auto;
+  }
+  #main img {
+    width: 340px;
+    height: 240px;
+    position: relative;
+    left: -5px;
+    top: -586px;
+    z-index: -5;
+  }
+  .decor {
+    width: 481px;
+    height: 190px;
+    left: 55px;
+    top: -768px;
+  }
+  .decor_slider {
+    width: 300px;
+    top: 107px;
+    left: -30px;
+  }
+  .main-text_container h1 {
+    margin-top: 60px;
+    font-size: 30px;
+  }
+  .main-text_container p {
+    width: 320px;
+    font-size: 16px;
+    margin: auto;
+    line-height: 25px;
+  }
+  .main-text_container h1,
+  p {
+    text-align: center;
+  }
+  .main-text_container {
+    width: auto;
+    margin: auto;
+    margin-top: 300px;
+    float: none;
+  }
+  .main-text_container .get-chrome_btn {
+    margin-top: 35px;
+  }
+  .main-text_container .get-firefox_btn {
+    float: right;
+    margin: auto;
+    margin-top: -45.5px;
+  }
+  #features {
+    height: 1060px;
+  }
+  #features h2 {
+    margin-top: 140px;
+    font-size: 25px;
+  }
+  #features .features_main-par {
+    width: 320px;
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  .nav-bar__paragraph-slider {
+    display: block;
+    margin-top: 70px;
+  }
+  .nav-bar__paragraph-slider h3 {
+    padding: 20px 0px 20px 0px;
+  }
+  .nav-bar__paragraph-slider a {
+    padding-bottom: 18px;
+  }
+  .respon {
+    opacity: 0.5;
+    display: block;
+  }
+  .slider-page_img {
+    float: none;
+    width: 100%;
+    margin-top: 85px;
+    margin-left: -24px;
+  }
+  .slider-page_text {
+    margin: auto;
+    text-align: center;
+  }
+  #slider-page_container h2 {
+    font-size: 24px;
+    margin-top: 77px;
+    margin-bottom: 16px;
+  }
+  #slider-page_container p {
+    width: 320px;
+    margin-left: 0px;
+    font-size: 16px;
+  }
+
+  #extension-download {
+    text-align: center;
+    height: auto;
+  }
+  #extension-download h2 {
+    font-size: 25px;
+  }
+  #extension-download .extension-download_par {
+    width: 320px;
+    font-size: 16px;
+  }
+  .extensions-list {
+    display: block;
+  }
+
+  #faq_section {
+    padding-top: 70px;
+    padding-bottom: 120px;
+    height: auto;
+  }
+  #faq_section h2 {
+    font-size: 25px;
+  }
+  #faq_section p {
+    font-size: 16px;
+    width: 320px;
+  }
+  .faq-accordion {
+    width: 340px;
+  }
+  .faq-accordion hr {
+    opacity: 0.5;
+  }
+  .faq-accordion h3 {
+    font-size: 15px;
+  }
+  .faq-answer {
+    text-align: left;
+    opacity: 0.7;
+    line-height: 30px;
+  }
+
+  #contact-us {
+    height: 360px;
+  }
+  #contact-us,
+  footer {
+    position: relative;
+    width: 375px;
+    left: -22px;
+    padding: 1px;
+  }
+  #contact-us h3 {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  #contact-us h2 {
+    font-size: 24px;
+    width: 320px;
+    line-height: 27px;
+    margin-top: 18px;
+  }
+  .contact-us_form {
+    display: block;
+  }
+  .contact-us_btn {
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 300px;
+  }
+  .email-error_input-icon {
+    margin-left: 300px;
+  }
+
+  footer {
+    display: block;
+    height: 355px;
+    text-align: center;
+  }
+  .footer-nav {
+    display: block;
+  }
+  footer .logo_img {
+    float: none;
+    margin-top: 40px;
+  }
+  .footer-nav li {
+    margin-left: 0px;
+  }
+  .footer-nav a {
+    font-size: 14px;
+  }
+  .socials {
+    float: none;
+    margin-top: 40px;
+    margin-left: 130px;
+    width: 109px;
+  }
+  .socials li {
+    margin: 10px;
+  }
 }

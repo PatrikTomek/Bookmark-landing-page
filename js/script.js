@@ -1,4 +1,10 @@
 (function ($) {
+  $("#mobile-menu_overlay").hide();
+  $(".mobile-menu_btn").click(function (e) {
+    console.log("clicked");
+    $(this).next("#mobile-menu_overlay").addClass("open").slideDown();
+  });
+
   function featuresPageChanger() {
     $(".nav-header_slider").click(function (e) {
       e.preventDefault();
