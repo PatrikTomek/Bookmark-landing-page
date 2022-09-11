@@ -1,50 +1,60 @@
 (function ($) {
-  $("#mobile-menu_overlay").hide();
   $(".mobile-menu_btn").click(function (e) {
-    console.log("clicked");
-    $(this).next("#mobile-menu_overlay").addClass("open").slideDown();
+    $(".logo").hide();
+    $(".mobile-menu_btn").hide();
+    $("#mobile-logo_overlay").show();
+    $("#mobile-menu_close").show();
+    if ($(".main-nav").hasClass("active")) {
+      $(".main-nav").removeClass("active").slideUp();
+    } else {
+      $(".main-nav").addClass("active").slideDown();
+      $(".main-nav").css("display", "flex");
+      $(".socials_overlay").css("display", "flex");
+    }
   });
 
-  function featuresPageChanger() {
-    $(".nav-header_slider").click(function (e) {
-      e.preventDefault();
-      $(".nav-header_slider").removeAttr("id");
-      $(this).attr("id", "active");
+  $("#mobile-menu_close").click(function (e) {
+    $("#mobile-logo_overlay").hide();
+    $("#mobile-menu_close").hide();
+    $(".main-nav").removeClass("active").slideUp();
+    $(".logo").show();
+    $(".mobile-menu_btn").show();
+  });
 
-      var attr = $(this).attr("id", "active");
+  $(".nav-header_slider").click(function (e) {
+    e.preventDefault();
+    $(".nav-header_slider").removeAttr("id");
+    $(this).attr("id", "active");
 
-      if (typeof attr !== typeof undefined && attr !== false) {
-        if ($(this).hasClass("bookmark_btn")) {
-          $(".slider_page").removeClass("active_page");
-          $(".simple-bookmarking_page").addClass("active_page");
-        }
-        if ($(this).hasClass("intelligent-search_btn")) {
-          $(".slider_page").removeClass("active_page");
-          $(".intelligent-search_page").addClass("active_page");
-        }
-        if ($(this).hasClass("share-bookmarks_btn")) {
-          $(".slider_page").removeClass("active_page");
-          $(".share-bookmarks_page").addClass("active_page");
-        }
+    var attr = $(this).attr("id", "active");
+
+    if (typeof attr !== typeof undefined && attr !== false) {
+      if ($(this).hasClass("bookmark_btn")) {
+        $(".slider_page").removeClass("active_page");
+        $(".simple-bookmarking_page").addClass("active_page");
       }
-    });
-  }
-  featuresPageChanger();
-
-  function faqAccordion() {
-    $(".faq-question").click(function () {
-      if ($(this).next(".faq-answer").hasClass("open")) {
-        $(".faq-answer").removeClass("open").slideUp();
-        $(".faq-arrow").removeClass("reversed-arrow");
-      } else {
-        $(".faq-answer").removeClass("open").slideUp();
-        $(".faq-arrow").removeClass("reversed-arrow");
-        $(this).next(".faq-answer").addClass("open").slideDown();
-        $(this).children(".faq-arrow").addClass("reversed-arrow");
+      if ($(this).hasClass("intelligent-search_btn")) {
+        $(".slider_page").removeClass("active_page");
+        $(".intelligent-search_page").addClass("active_page");
       }
-    });
-  }
-  faqAccordion();
+      if ($(this).hasClass("share-bookmarks_btn")) {
+        $(".slider_page").removeClass("active_page");
+        $(".share-bookmarks_page").addClass("active_page");
+      }
+    }
+  });
+
+  $(".faq-question").click(function () {
+    if ($(this).next(".faq-answer").hasClass("open")) {
+      $(".faq-answer").removeClass("open").slideUp();
+      $(".faq-arrow").removeClass("reversed-arrow");
+    } else {
+      $(".faq-answer").removeClass("open").slideUp();
+      $(".faq-arrow").removeClass("reversed-arrow");
+      $(this).next(".faq-answer").addClass("open").slideDown();
+      $(this).children(".faq-arrow").addClass("reversed-arrow");
+    }
+  });
 
   function emailValidator() {
     function emailValid() {
