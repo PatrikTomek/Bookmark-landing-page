@@ -490,6 +490,10 @@ footer .logo_img {
   margin-top: -28px;
   margin-right: 158px;
 }
+.socials a,
+.socials_overlay a {
+  padding: 0px 13px 11px 11px;
+}
 .facebook_social,
 .twitter_social {
   height: 35px;
@@ -556,7 +560,7 @@ footer .logo_img {
     align-items: center;
     justify-content: flex-start;
     padding-top: 100px;
-    background-color: rgba(24, 50, 87, 0.867);
+    background-color: rgba(37, 43, 70, 0.95);
   }
   .main-nav li {
     width: 300px;
@@ -584,13 +588,13 @@ footer .logo_img {
   #mobile-logo_overlay {
     position: absolute;
     top: 35px;
-    left: 107px;
+    left: 100px;
     z-index: 99;
   }
   #mobile-menu_close {
     display: none;
     position: absolute;
-    right: 107px;
+    right: 100px;
     top: 40px;
     width: 16px;
     height: 15px;

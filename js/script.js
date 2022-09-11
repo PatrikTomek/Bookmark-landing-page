@@ -19,6 +19,7 @@
     $(".main-nav").removeClass("active").slideUp();
     $(".logo").show();
     $(".mobile-menu_btn").show();
+    $(".socials_overlay").hide();
   });
 
   $(".nav-header_slider").click(function (e) {
@@ -56,17 +57,17 @@
     }
   });
 
-  function emailValidator() {
-    function emailValid() {
+  const emailValidator = () => {
+    const emailValid = () => {
       $(".email-error_input-icon").css("display", "none");
       $(".email-error_sign").css("display", "none");
       $("#email_input").css("border", "none");
-    }
-    function emailNotValid() {
+    };
+    const emailNotValid = () => {
       $(".email-error_input-icon").css("display", "flex");
       $(".email-error_sign").css("display", "flex");
       $("#email_input").css("border", "2px solid var(--Soft-Red)");
-    }
+    };
 
     const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const emailInput = $("#email_input");
@@ -78,7 +79,7 @@
       emailNotValid();
       return false;
     }
-  }
+  };
 
   $("#email_input").change(emailValidator);
 })(jQuery);
