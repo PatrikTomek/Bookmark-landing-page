@@ -588,13 +588,13 @@ footer .logo_img {
   #mobile-logo_overlay {
     position: absolute;
     top: 35px;
-    left: 100px;
+    left: 40px;
     z-index: 99;
   }
   #mobile-menu_close {
     display: none;
     position: absolute;
-    right: 100px;
+    right: 40px;
     top: 40px;
     width: 16px;
     height: 15px;
@@ -615,7 +615,7 @@ footer .logo_img {
   }
   .socials_overlay {
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 50%;
     margin-left: -50px;
     display: none;
