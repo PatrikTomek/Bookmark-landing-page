@@ -362,7 +362,8 @@ body {
   background-position: cover;
 }
 .reversed-arrow {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -webkit-transition-duration: .5s;
   background-image: url("../images/icon-arrow-active.svg");
 }
 .faq-question {
